@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>元素谱 / ELEMENTA — 118 种元素，一张表</title>
+  <meta name="description" content="元素谱 ELEMENTA：118 种元素的周期表，点击任意元素查看基本信息、电子排布与轨道方框图。">
+  <meta name="theme-color" content="#F5F1E8">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body data-page="index" data-view="list">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div id="site-header"></div>
+  <noscript>
+    <div class="noscript-note">
+      <strong>需要启用 JavaScript</strong>
+      <p>周期表与元素详情使用原生 JavaScript 渲染。请启用 JavaScript 后刷新；数据保存在 data/ 目录的静态文件中。</p>
+    </div>
+  </noscript>
+
+  <main id="main" class="page-main">
+    <section class="archive-intro" aria-labelledby="page-title">
+      <div class="intro-meta"><span>SIMON WORKSHOP™</span><span>DIGITAL ARCHIVE 001</span><span>118 ELEMENTS</span></div>
+      <div class="intro-title-row">
+        <h1 id="page-title"><span class="title-cn">元素谱</span><span class="title-slash">/</span><span class="title-en">ELEMENTA</span></h1>
+        <p class="lede">118 种元素，一张表。点击任意元素查看基本信息。</p>
+      </div>
+    </section>
+
+    <section class="archive-board" aria-label="元素周期表">
+      <div id="board-head"></div>
+      <div id="periodic-mount" class="desktop-table"></div>
+      <div id="mobile-list-mount"></div>
+      <div id="table-legend" class="table-legend" aria-label="元素类别图例"></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="scripts/core.js"></script>
+  <script src="data/elements-core.js"></script>
+  <script src="data/elements-chemistry.js"></script>
+  <script src="scripts/electron-config.js"></script>
+  <script src="data/elements.js"></script>
+  <script src="scripts/layout.js"></script>
+  <script src="scripts/detail.js"></script>
+  <script src="scripts/page.js"></script>
+</body>
+</html>

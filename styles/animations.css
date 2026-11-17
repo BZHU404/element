@@ -1,0 +1,45 @@
+/* ============================================================
+   ELEMENTA — animations.css
+   ============================================================ */
+
+@keyframes cellIn {
+  from { opacity: 0; transform: translateY(7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes flashLabel {
+  0% { background: rgba(170, 138, 84, 0.1); }
+  25% { background: rgba(170, 138, 84, 0.45); }
+  100% { background: rgba(237, 230, 214, 0.55); }
+}
+
+@keyframes ringDraw {
+  from { stroke-dashoffset: 100; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes dotIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.bohr-ring {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: ringDraw 1.15s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+.bohr-dot { opacity: 0; animation: dotIn 0.35s ease forwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .element-cell { opacity: 1 !important; transform: none !important; }
+  .bohr-ring { stroke-dashoffset: 0 !important; }
+  .bohr-dot { opacity: 1 !important; }
+}
